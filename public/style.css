@@ -1,17 +1,69 @@
+/* For everything */
 * {
     box-sizing: border-box;
 }
 
+/*For the body of the program */
 body {
     margin: 0;
     background-color: blueviolet;
     padding: 20px;
+    font-family: 'Karla', sans-serif;
 }
-
+/* For the playing area where the dice are */
 main {
-    background-color: aliceblue;
+    background-color: azure;
     height: 400px;
     max-width: 800px;
     border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
+/* For the actual dice */
+.dice-container {
+    display: grid;
+    grid-template: auto auto / repeat(5,1fr);
+    gap: 20px;
+}
+
+/* For the face of the die */
+.die-face {
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+/* For numbers on the die */
+.die-number {
+    font-size: 2rem;
+}
+
+/* For the roll button */
+.roll-button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: blueviolet;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.roll-button:focus {
+    outline: none;
+}
+
+.roll-button:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0,0,0,0.7);
+}
